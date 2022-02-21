@@ -1,0 +1,12 @@
+.menu__nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 25px;
+    
+}
+.header{
+    margin-top: 15px;
+    background-color: rgb(81, 158, 221);
+    height: 40px;
+}

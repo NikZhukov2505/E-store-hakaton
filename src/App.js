@@ -1,5 +1,6 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
+import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Login from './Pages/Auth-scenes/Login/Login';
 import Registration from './Pages/Auth-scenes/Regist/Registration';
@@ -19,6 +20,8 @@ const App = () => {
         <Route path='login' element={<Login />} />
         <Route path='registration' element={<Registration />} />
       </Routes>
+
+      <Footer />
 
     </div>
   );

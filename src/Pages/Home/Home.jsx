@@ -6,6 +6,7 @@ const Home = () => {
 
 
     return (
+<<<<<<< HEAD
         <section>
 
             <div className={styles.title_back}>
@@ -74,6 +75,11 @@ const Home = () => {
 
 
 
+=======
+        <div className={styles.home__section}>
+            <h1>Home</h1>
+        </div>
+>>>>>>> origin/master
     );
 };
 

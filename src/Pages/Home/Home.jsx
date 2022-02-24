@@ -4,9 +4,7 @@ import pic from './../../Images/pic/first.jpg'
 
 const Home = () => {
 
-
     return (
-<<<<<<< HEAD
         <section>
 
             <div className={styles.title_back}>
@@ -65,21 +63,6 @@ const Home = () => {
             </div>
 
         </ section>
-
-
-
-
-
-
-
-
-
-
-=======
-        <div className={styles.home__section}>
-            <h1>Home</h1>
-        </div>
->>>>>>> origin/master
     );
 };
 

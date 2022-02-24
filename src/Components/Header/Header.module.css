@@ -59,11 +59,10 @@
     align-items: center;
 }
 .navigatiion{
-    width: 35%;
+    width: 50%;
 }
 .menu {
     font-family: 'Roboto';
-    /* color: black; */
     font-weight: 500;
     transition: 0.4s;
     color: rgb(184, 184, 184);

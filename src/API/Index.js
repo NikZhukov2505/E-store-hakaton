@@ -2,7 +2,7 @@ import axios from "axios"
 
 
 const instance = axios.create({
-    baseURL: 'http://192.168.0.123:8000'
+    baseURL: 'http://192.168.1.142:8000'
 })
 
 export const hakatonApi = {
@@ -11,5 +11,14 @@ export const hakatonApi = {
     },
     signUp(userData) {
         return instance?.post('/api/v1/auth/users/', userData).then(response => response.data)
+    },
+    getAllItems() {
+        return instance.get('/api/v1/product/').then(response => response.data)
+    },
+    getAllByName(value) {
+        return instance.get('/api/v1/product/?search=' + value).then(response => response.data)
+    },
+    getAllById(id) {
+        return instance.get('/api/v1/product/' + id).then(response => response.data)
     },
 } 

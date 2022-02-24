@@ -5,7 +5,7 @@ import pic from './../../Images/pic/first.jpg'
 const Home = () => {
 
     return (
-        <section>
+        <section className={styles.home_section}>
 
             <div className={styles.title_back}>
                 <h2 >Home page</h2>

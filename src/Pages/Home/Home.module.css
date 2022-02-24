@@ -94,3 +94,6 @@ font-weight: 500;
 text-shadow: black 1px 1px 1px ; 
 border-radius: 5px;
 }
+.home_section {
+    min-height: 100vh;
+}

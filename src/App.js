@@ -10,17 +10,17 @@ import Home from './Pages/Home/Home';
 
 const App = () => {
   return (
-    <div>
+    <div className='app__change'>
       <Header />
-
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/detail' element={<Detail />} />
-        <Route path='/basket' element={<Basket />} />
-        <Route path='login' element={<Login />} />
-        <Route path='registration' element={<Registration />} />
-      </Routes>
-
+      <main className='main__section'>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/detail' element={<Detail />} />
+          <Route path='/basket' element={<Basket />} />
+          <Route path='login' element={<Login />} />
+          <Route path='registration' element={<Registration />} />
+        </Routes>
+      </main>
       <Footer />
 
     </div>

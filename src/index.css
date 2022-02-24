@@ -90,3 +90,11 @@
     font-size: inherit;
     font-weight: inherit;
   }
+  .app__change{
+    display: flex;
+    flex-direction: column;
+  }
+  .main__section{
+    flex-grow: 1;
+    min-height: 100vh;
+  }

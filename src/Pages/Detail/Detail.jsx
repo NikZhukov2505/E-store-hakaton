@@ -10,7 +10,7 @@ const Detail = () => {
     const [descr, setDescr] = useState(false)
     const changeVisible = () => setDescr(!descr)
 
-    // const isLoading = useSelector(state => state)
+    // const isLoading = useSelector(state => state.loading.isLoading)
     // console.log(isLoading);
 
     useEffect(() => {

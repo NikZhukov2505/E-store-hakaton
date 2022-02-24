@@ -1,5 +1,5 @@
-import React from 'react';
-import { NavLink } from 'react-router-dom';
+import React, { useEffect } from 'react';
+import { NavLink, useNavigate } from 'react-router-dom';
 import styles from './Header.module.css'
 import './../../App.css'
 import adress from './../../Images/adress2.png'
@@ -8,10 +8,23 @@ import facebook from './../../Images/facebook2.png'
 import instagram from './../../Images/instagram2.png'
 import twitter from './../../Images/twitter.png'
 import logo from './../../Images/it_logo.png'
+import { useDispatch, useSelector } from 'react-redux';
+import { getToken } from '../../LocalStorage';
+import { setToken } from '../../Redux/reducers/store-reducer';
 
 
 
 const Header = () => {
+    const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const lsToken = getToken()
+    const { token } = useSelector(state => state.user)
+
+    useEffect(() => {
+        lsToken && dispatch(setToken(lsToken));
+        navigate('/');
+    }, [token]);
+
     return (
         <header className={styles.header}>
             <div className={styles.header__top}>
@@ -45,8 +58,13 @@ const Header = () => {
                                 <li><NavLink className={styles.menu} to='/'>Home</NavLink></li>
                                 <li><NavLink className={styles.menu} to='/detail'>Detail</NavLink></li>
                                 <li><NavLink className={styles.menu} to='/basket'>Basket</NavLink></li>
-                                <li><NavLink className={styles.menu} to='/login'>Login</NavLink></li>
-                                <li><NavLink className={styles.menu} to='registration'>Registration</NavLink></li>
+                                {
+                                    !token &&
+                                    <>
+                                        <li><NavLink className={styles.menu} to='/login'>Login</NavLink></li>
+                                        <li><NavLink className={styles.menu} to='registration'>Registration</NavLink></li>
+                                    </>
+                                }
                             </nav>
                         </div>
                     </div>

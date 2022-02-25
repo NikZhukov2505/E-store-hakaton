@@ -25,10 +25,7 @@ const Footer = () => {
                         <div className={styles.navigatiion}>
                             <nav className={styles.menu__nav}>
                                 <li><NavLink className={styles.menu} to='/'>Home</NavLink></li>
-                                <li><NavLink className={styles.menu} to='/detail'>Detail</NavLink></li>
-                                <li><NavLink className={styles.menu} to='/basket'>Basket</NavLink></li>
-                                <li><NavLink className={styles.menu} to='/login'>Login</NavLink></li>
-                                <li><NavLink className={styles.menu} to='registration'>Registration</NavLink></li>
+                                <li><NavLink className={styles.menu} to='/basket'>Cart</NavLink></li>
                             </nav>
                         </div>
                     </div>

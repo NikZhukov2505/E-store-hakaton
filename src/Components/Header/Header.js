@@ -42,7 +42,7 @@ const Header = () => {
                     </div>
                     <div className={styles.info__block2}>
                         <a title='Facebook' href="https://facebook.com"><img className={styles.top__img} src={facebook} alt="" /></a>
-                        <a title='Instagram' href="https://instagram.com"><img className={styles.top__img} src={instagram} alt="" /></a>
+                        <a title='Instagram' href="https://www.instagram.com/itcbootcamp/"><img className={styles.top__img} src={instagram} alt="" /></a>
                         <a title='Twitter' href="https://twitter.com"><img className={styles.top__img} src={twitter} alt="" /></a>
                     </div>
                 </div>
@@ -57,7 +57,7 @@ const Header = () => {
                             <nav className={styles.menu__nav}>
                                 <li><NavLink className={styles.menu} to='/'>Home</NavLink></li>
                                 <li><NavLink className={styles.menu} to='/detail'>Detail</NavLink></li>
-                                <li><NavLink className={styles.menu} to='/basket'>Basket</NavLink></li>
+                                <li><NavLink className={styles.menu} to='/basket'>Cart</NavLink></li>
                                 {
                                     !token &&
                                     <>

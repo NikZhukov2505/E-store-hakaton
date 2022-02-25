@@ -1,7 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Detail.module.css'
-import examp from './../../Images/detail.jpg'
-import Spinner from '../../Components/Spinner/Spinner';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { useDispatch, useSelector } from 'react-redux';
@@ -13,7 +11,6 @@ const Detail = () => {
     const [descr, setDescr] = useState(false)
     const changeVisible = () => setDescr(!descr)
     const laptopDetail = useSelector(state => state?.laptop?.laptopDetail)
-    // console.log(laptopDetail);
 
     const dispatch = useDispatch()
 
@@ -37,7 +34,7 @@ const Detail = () => {
                     </div>
                     <div className={styles.detail__card}>
                         <h2>{laptopDetail.title}</h2>
-                        <h3>Цена$ {laptopDetail.price}</h3>
+                        <h3>Цена: {laptopDetail.price}</h3>
                         <p>Info: {laptopDetail.comment}</p>
                         <div className={styles.detail__add}>
                             <input type="number" id="quantity" name="quantity" min="1" max="10" />

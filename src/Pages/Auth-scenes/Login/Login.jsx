@@ -34,7 +34,7 @@ const Login = () => {
                         </div>
                         <div>
                             <p>Ваш пароль</p>
-                            <input onChange={(e) => getUserData('password', e.target.value)} value={userData.password} className={styles.enter} type="text" placeholder='Введите ваш пароль' />
+                            <input onChange={(e) => getUserData('password', e.target.value)} value={userData.password} className={styles.enter} type="password" placeholder='Введите ваш пароль' />
                         </div>
 
                     </div>

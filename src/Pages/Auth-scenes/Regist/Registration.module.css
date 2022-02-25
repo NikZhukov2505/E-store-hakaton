@@ -46,3 +46,8 @@
 .form__regist {
     margin: 40px 0;
 }
+.pass__info {
+    margin-top: 15px;
+    font-size: 20px;
+    color: rgb(102, 102, 102);
+}

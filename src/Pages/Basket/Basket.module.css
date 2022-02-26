@@ -5,6 +5,7 @@
     background: url('./../../Images/banner-detail.jpg') center, no-repeat;
     background-size: cover;
     position: relative;
+    z-index: -1;
 }
 .title {
     content: '';
@@ -113,4 +114,19 @@
 }
 .basket__page {
     min-height: 100vh;
+=======
+
+@media(max-width:1200px) {
+    .title{
+        position: absolute;
+        top:40px;
+    }
+    
+    }
+@media(max-width:1200px){
+    .title{
+        position: absolute;
+        top: 10px;
+    }
+
 }

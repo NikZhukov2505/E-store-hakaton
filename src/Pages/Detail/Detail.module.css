@@ -108,3 +108,10 @@ font-family: 'Roboto';
     background: url('./../../Images/nout.jpg') center, no-repeat;
     background-size: cover;
 }
+@media(max-width:1200px) {
+    .title{
+        position: absolute;
+        top:40px;
+    }
+    
+    }

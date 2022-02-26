@@ -22,7 +22,7 @@ const Header = () => {
 
     const logOut = () => {
         dispatch(removeLSToken())
-        navigate('/login')
+        window.location.reload()
     }
 
     useEffect(() => {
@@ -84,6 +84,7 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+        </header>
     );
 };
 

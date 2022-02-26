@@ -96,5 +96,5 @@
   }
   .main__section{
     flex-grow: 1;
-    min-height: 180vh;
+    min-height: 100vh;
   }

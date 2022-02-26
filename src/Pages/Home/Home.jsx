@@ -62,7 +62,7 @@ const Home = () => {
                         {
                             laptopArr.map((e) => {
                                 return (
-                                    <div key={e.id} className={styles.menu_card}>
+                                    <div className={styles.menu_card} key={e.id}>
                                         <Link to={'/detail/' + e?.id}>
                                             <div className={styles.card__img}>
                                                 <img src={e.image} alt="" />

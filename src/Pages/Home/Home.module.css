@@ -32,6 +32,7 @@ font-family:'Roboto'  ;
     height: 200px;
     text-align: center;
     transition: 0.8s;
+    /* padding-bottom: 10px; */
 }
 
 .menu_card:hover {
@@ -118,8 +119,6 @@ border-radius: 5px;
     background-color: rgb(0, 0, 0);
     color: #fff;
 }
-
-
 @media(max-width:1200px) {
 .title_back h2{
     position: absolute;

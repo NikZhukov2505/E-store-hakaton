@@ -15,8 +15,13 @@ const Basket = () => {
         }
     }, [])
 
-    const removeItem = () => {
-        products.filter(item => item.id != products.id)
+    const removeItem = (id) => {
+        let all_products = JSON.parse(localStorage.getItem('products')) || []
+
+        const result = all_products.filter(item => item.id != id)
+
+        setProdcts(result)
+        localStorage.setItem('products', JSON.stringify(result))
     }
 
 
@@ -53,7 +58,7 @@ const Basket = () => {
                                     <input defaultValue={e.count} type="number" />
                                     <p>{e.price}</p>
                                     <p>{e.count * e.price}</p>
-                                    <button>REMOVE</button>
+                                    <button onClick={() => removeItem(e.id)}>REMOVE</button>
                                 </div>
                             </div>
                         ))

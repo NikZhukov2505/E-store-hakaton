@@ -11,13 +11,13 @@ const Detail = () => {
     const [descr, setDescr] = useState(false)
     const changeVisible = () => setDescr(!descr)
     const laptopDetail = useSelector(state => state?.laptop?.laptopDetail)
-    console.log(laptopDetail);
 
     const dispatch = useDispatch()
 
 
     useEffect(() => {
         dispatch(getById(params.id))
+        AOS.init();
     }, [])
 
     const addToBasket = (el) => {
@@ -52,7 +52,7 @@ const Detail = () => {
                     <div className={`${styles.detail__card} ${styles.card1}`}>
                         <img className={styles.examp} src={laptopDetail?.image} alt="" />
                     </div>
-                    <div className={styles.detail__card}>
+                    <div data-aos="fade-up" className={styles.detail__card}>
                         <h2>{laptopDetail.title}</h2>
                         <h3>Цена: {laptopDetail.price}</h3>
                         <p>Info: {laptopDetail.comment}</p>

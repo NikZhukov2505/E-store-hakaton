@@ -117,7 +117,7 @@
     width: 25px; 
     height: 25px; 
     cursor: pointer; 
-    z-index: 10; 
+    z-index: 1; 
 } 
 /* Добавление бургера */ 
 .btn2 span, 
@@ -150,6 +150,7 @@ transition: 0.5s ease 0s;
     background-color: rgb(41, 41, 41); 
     box-shadow: 1px 0 5px rgba(0, 0, 0, 0.3); 
     transition: 0.8s ease 0s; 
+
 } 
 .menu__item { 
     display: block; 
@@ -193,11 +194,9 @@ transition: 0.5s ease 0s;
 }
 @media(min-width:767px){
     .burger_menu{
-        display: none;
+        display: block;
     }
-    .btn2{
-        display: none;
-    }   
+    
     
 }
 

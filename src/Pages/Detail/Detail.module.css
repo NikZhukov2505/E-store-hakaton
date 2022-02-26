@@ -6,6 +6,7 @@
     background: url('./../../Images/banner-detail.jpg') center, no-repeat;
     background-size: cover;
     position: relative;
+    z-index: -1;
 }
 
 .title {
@@ -17,14 +18,17 @@
     color: rgba(185, 10, 216, 0.808);;
     font-weight: 800;
     font-family: 'Roboto';
+    
 }
 .examp{
     width: 100%;
+    
     border-radius: 4px;
 }
 .block{
     margin: 100px 0;
     display: flex;
+    z-index: -3;
 }
 .detail__card {
     flex: 0 1 40%;
@@ -44,11 +48,15 @@
     color: rgb(195, 169, 20);
 
 }
+.detail__card{
+    z-index: -1;
+}
 .detail__card p {
     font-size: 22px;
     font-weight: 400;
     font-family: 'Roboto';
     color: rgb(179, 175, 175);
+    
 }
 .detail__add{
 align-items: center;
@@ -113,5 +121,34 @@ font-family: 'Roboto';
         position: absolute;
         top:40px;
     }
-    
+}
+    @media(max-width:767px) {
+        .title{
+            position: absolute;
+            top:18px;
+        }
     }
+    @media(max-width:992px) {
+        .title{
+            top:15px
+        }
+    }
+    @media(max-width:390px) {
+    .over__detail {
+        height:20vh ;
+
+    }
+.card1 {
+height: 13vh;
+    }
+    .examp{
+        height: 13vh;
+    }
+    .add__btn{
+        margin-top: 5%;
+    }
+    .detail__description p{
+        font-size: 15px;
+    }
+
+}

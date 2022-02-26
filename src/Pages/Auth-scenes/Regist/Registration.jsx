@@ -40,7 +40,8 @@ const Registration = () => {
                 </div>
                 <div className={styles.inputs}>
                     <p>Password</p>
-                    <input value={userData.password} onChange={(e) => getUserData('password', e.target.value)} className={styles.enter} placeholder='Ваш Пароль' type="text" />
+                    <input value={userData.password} onChange={(e) => getUserData('password', e.target.value)} className={styles.enter} placeholder='Ваш Пароль' type="password" />
+                    <p className={styles.pass__info}>Пароль должен содержать: "Латиница" Больше 5 символов 1 заглавный и одна цифра</p>
                 </div>
                 <div className={styles.btn__wrap}>
                     <button className={styles.add__btn}>Регистрация</button>

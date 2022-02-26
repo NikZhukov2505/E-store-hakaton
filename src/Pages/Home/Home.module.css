@@ -22,27 +22,26 @@ font-family:'Roboto'  ;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
 }
 .menu_card{
     flex: 0 1 22%;
     margin-top: 10%;
     margin-bottom: 10%;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 200px;
     text-align: center;
+    transition: 0.8s;
 }
 
-.menu_card:hover { 
-    width: 300px;
-    height: 380px;
-    box-shadow:  0px -5px 15px 0 rgba(185, 10, 216, 0.808);
-    
-    
+.menu_card:hover {
+    height: 250px;
+    box-shadow:  0px 5px 55px 0 rgba(185, 10, 216, 0.808);
 } 
+
 .menu_card img { 
-    
     width: 100%;
+    height: 260px;
     transition: 1s;
     border: 20px solid rgba(185, 10, 216, 0.808);
 }
@@ -93,7 +92,6 @@ font-family:'Roboto'  ;
     text-align: center;
     width:50px;
 height: 30px;
-
 background-color: rgba(185, 10, 216, 0.808);; 
 color: #fff; 
 font-family: 'Roboto'; 
@@ -104,6 +102,7 @@ border-radius: 5px;
 .home_section {
     min-height: 100vh;
 }
+
 
 @media(max-width:1200px) {
 .title_back h2{
@@ -120,3 +119,4 @@ border-radius: 5px;
     }
 
 }
+

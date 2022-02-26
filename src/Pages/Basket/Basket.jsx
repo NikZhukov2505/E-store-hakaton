@@ -1,8 +1,25 @@
 import React from 'react';
 import styles from './Basket.module.css'
-import product from '../../Images/overdetail.jpg'
 
 const Basket = () => {
+
+
+
+    const [products, setProdcts] = React.useState([])
+
+    React.useEffect(() => {
+        const data = JSON.parse(localStorage.getItem('products'));
+
+        if (data != null || data != undefined) {
+            setProdcts(JSON.parse(localStorage.getItem('products')));
+        }
+    }, [])
+
+    const removeItem = () => {
+        products.filter(item => item.id != products.id)
+    }
+
+
     return (
         <section className={styles.basket__page}>
             <div className={styles.up__page}>
@@ -15,28 +32,35 @@ const Basket = () => {
                         <p>ТОВАР</p>
                     </div>
                     <div className={styles.inner__wrapperRight}>
-                        <p>НАЛИЧИЕ</p>
                         <p>КОЛИЧЕСТВО</p>
                         <p>ЦЕНА</p>
+                        <p>Всего</p>
                         <div> </div>
                     </div>
                 </div>
 
-                <div className={styles.card}>
-                    <div className={styles.card_left}>
-                        <img src={product} width='100' alt="wa" />
-                        <h1>Norton Internet Security</h1>
 
-                    </div>
-                    <div className={styles.card_right}>
-                        <p>В наличии</p>
-                        <input type="number" id="quantity" name="quantity" min="1" max="10" />
-                        <p>25$</p>
+                {
+                    products.length > 0 ?
+                        products?.map(e => (
+                            <div key={e.id} className={styles.card}>
+                                <div className={styles.card_left}>
+                                    <img src={e.img} width='100' alt="wa" />
+                                    <h1>{e.name}</h1>
+                                </div>
+                                <div className={styles.card_right}>
 
+                                    <input defaultValue={e.count} type="number" />
+                                    <p>{e.price}</p>
+                                    <p>{e.count * e.price}</p>
+                                    <button>REMOVE</button>
+                                </div>
+                            </div>
+                        ))
+                        :
+                        <h2 style={{ fontSize: 40, color: '#fff' }}>Basket empty</h2>
+                }
 
-                        <button>REMOVE    </button>
-                    </div>
-                </div>
 
             </div>
         </section>

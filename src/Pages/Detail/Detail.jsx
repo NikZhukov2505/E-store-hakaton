@@ -11,16 +11,36 @@ const Detail = () => {
     const [descr, setDescr] = useState(false)
     const changeVisible = () => setDescr(!descr)
     const laptopDetail = useSelector(state => state?.laptop?.laptopDetail)
+    console.log(laptopDetail);
 
     const dispatch = useDispatch()
 
 
-
     useEffect(() => {
         dispatch(getById(params.id))
-    }, [AOS.init()])
+    }, [])
 
+    const addToBasket = (el) => {
+        let all_products = JSON.parse(localStorage.getItem('products'))
+        let arr = all_products || []
 
+        const product = {
+            name: el.title,
+            id: el.id,
+            count: 1,
+            price: el.price,
+            img: el.image,
+        }
+
+        let one_elem = arr.find(elem => el.id == elem.id)
+        if (one_elem) {
+            one_elem.count = one_elem.count + 1
+        } else {
+            arr.push(product)
+        }
+
+        localStorage.setItem('products', JSON.stringify(arr))
+    }
 
     return (
         <section >
@@ -28,7 +48,7 @@ const Detail = () => {
                 <h2 className={styles.title}>Detail</h2>
             </div>
             <div className='container'>
-                <div data-aos-duration="1000" data-aos="zoom-in" className={styles.block}>
+                <div className={styles.block}>
                     <div className={`${styles.detail__card} ${styles.card1}`}>
                         <img className={styles.examp} src={laptopDetail?.image} alt="" />
                     </div>
@@ -38,7 +58,7 @@ const Detail = () => {
                         <p>Info: {laptopDetail.comment}</p>
                         <div className={styles.detail__add}>
                             <input type="number" id="quantity" name="quantity" min="1" max="10" />
-                            <button className={styles.add__btn}>Add To Cart</button>
+                            <button onClick={() => addToBasket(laptopDetail)} className={styles.add__btn}>Add To Cart</button>
                         </div>
                     </div>
                 </div>

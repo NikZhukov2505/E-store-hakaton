@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import styles from './Header.module.css'
 import './../../App.css'
 import adress from './../../Images/adress2.png'
@@ -9,7 +9,7 @@ import instagram from './../../Images/instagram2.png'
 import twitter from './../../Images/twitter.png'
 import logo from './../../Images/it_logo.png'
 import { useDispatch, useSelector } from 'react-redux';
-import { getToken } from '../../LocalStorage';
+import { getToken, removeLSToken } from '../../LocalStorage';
 import { setToken } from '../../Redux/reducers/store-reducer';
 
 
@@ -19,6 +19,11 @@ const Header = () => {
     const dispatch = useDispatch()
     const lsToken = getToken()
     const { token } = useSelector(state => state.user)
+
+    const logOut = () => {
+        dispatch(removeLSToken())
+        navigate('/login')
+    }
 
     useEffect(() => {
         lsToken && dispatch(setToken(lsToken));
@@ -55,46 +60,30 @@ const Header = () => {
                         </div>
                         <div className={styles.navigatiion}>
                             <nav className={styles.menu__nav}>
-                                <li><NavLink className={styles.menu} to='/'>Home</NavLink></li>
-                                <li><NavLink className={styles.menu} to='/detail'>Detail</NavLink></li>
-                                <li><NavLink className={styles.menu} to='/basket'>Cart</NavLink></li>
+
                                 {
-                                    !token &&
-                                    <>
-                                        <li><NavLink className={styles.menu} to='/login'>Login</NavLink></li>
-                                        <li><NavLink className={styles.menu} to='registration'>Registration</NavLink></li>
-                                    </>
+                                    token ? (
+                                        <>
+                                            <li><Link className={styles.menu} to='/'>Home</Link></li>
+                                            <li><Link className={styles.menu} to='/basket'>Cart</Link></li>
+                                            <button className={styles.add__btn} onClick={logOut}>Выход</button>
+                                        </>
+                                    ) :
+                                        (
+                                            <>
+                                                <li><Link className={styles.menu} to='/'>Home</Link></li>
+                                                <li><Link className={styles.menu} to='/basket'>Cart</Link></li>
+                                                <li><Link className={styles.menu} to='/login'>Login</Link></li>
+                                                <li><Link className={styles.menu} to='registration'>Registration</Link></li>
+                                            </>
+                                        )
+
                                 }
                             </nav>
                         </div>
                     </div>
                 </div>
             </div>
-
-            <div className={styles.burger__menu}>
-                <input id="toggle" className={styles.toggle} type="checkbox" />
-                <label htmlFor="toggle" className={styles.btn2}>
-                    <span></span>
-                </label>
-
-                <div className={styles.sidebar}>
-                    <ul>
-                        <li><NavLink className={styles.menu__item} to='/'>Home</NavLink></li>
-                        <li><NavLink className={styles.menu__item} to='/basket'>Basket</NavLink></li>
-                        {
-                            !token &&
-                            <>
-                                <li><NavLink className={styles.menu__item} to='/login'>Login</NavLink></li>
-                                <li><NavLink className={styles.menu__item} to='registration'>Registration</NavLink></li>
-                            </>
-                        }
-                    </ul>
-                </div>
-            </div>
-
-
-
-        </header>
     );
 };
 

@@ -37,8 +37,8 @@ const Home = () => {
                                 return (
                                     <div key={e.id} className={styles.menu_card}>
                                         <Link to={'/detail/' + e?.id}>
-                                            <div>
-                                                <img alt="" />
+                                            <div className={styles.card__img}>
+                                                <img className={styles.imgage} src={e.image} alt="" />
 
                                             </div>
                                             <div className={styles.menu_title}>

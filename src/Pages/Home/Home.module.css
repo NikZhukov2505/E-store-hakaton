@@ -22,27 +22,26 @@ font-family:'Roboto'  ;
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
 }
 .menu_card{
     flex: 0 1 22%;
     margin-top: 10%;
     margin-bottom: 10%;
-    width: 300px;
-    height: 300px;
+    width: 100%;
+    height: 200px;
     text-align: center;
+    transition: 0.8s;
 }
 
-.menu_card:hover { 
-    width: 300px;
-    height: 380px;
-    box-shadow:  0px -5px 15px 0 rgba(185, 10, 216, 0.808);
-    
-    
+.menu_card:hover {
+    height: 250px;
+    box-shadow:  0px 5px 55px 0 rgba(185, 10, 216, 0.808);
 } 
+
 .menu_card img { 
-    
     width: 100%;
+    height: 260px;
     transition: 1s;
     border: 20px solid rgba(185, 10, 216, 0.808);
 }
@@ -75,6 +74,8 @@ font-family:'Roboto'  ;
 }
 
 .inp{
+    z-index: -1;
+
     height: 50px;
     width: 600px;
     font-size: 18px;
@@ -87,13 +88,14 @@ font-family:'Roboto'  ;
     font-family: 'Roboto';
     padding-left: 10px;
     margin-top: 10px;
+
+
 }
 .btn {
     margin-left: 10px;
     text-align: center;
     width:50px;
 height: 30px;
-
 background-color: rgba(185, 10, 216, 0.808);; 
 color: #fff; 
 font-family: 'Roboto'; 
@@ -111,12 +113,104 @@ border-radius: 5px;
     top:10px;
 }
 
+.card__img{
+    height: 220px;
+}
+.menu_title{
+    font-size: 20px;
+
+}
+.menu_price{
+       font-size: 20px;
+    
+}
 }
 
-@media(max-width:767px) {
-    .title_back h2{
-        position: absolute;
-        top: 15px;
+@media(max-width:992px) {
+    
+    .menu_card{
+        margin-top: 15%;
+        margin-bottom: 15%;
+    }
+    .card__img{
+        height: 210px;
+    }
+    .menu_title{
+        margin-top: 5%;
+        font-size: 18px;
+    
+    }
+    .menu_price{
+           font-size: 15px;
+        
+    }
     }
 
+@media(max-width:767px) {
+    .menu_title h2{
+        /* position: absolute; */
+        /* top: 15px; */
+        /* font-size: 100px; */
+        margin-top: 20px;
+    }
+    .title_back h2{
+         position: absolute; 
+         top: 4px; 
+         font-size: 35px;
+    }
+    .menu_card{
+        flex: 0 1 50%;
+        /* margin: 20px; */
+    }
+    .image{
+        width: 80px;
+        height: 80px;
+    }
+    .menu_title{
+        font-size: 15px;
+    
+    }
+    .menu_price{
+           font-size: 13px;
+        
+    }
+    .title_back{
+        width: 100%;
+        height: 10vh;
+        
+    }
+    
+    .inp{
+        position: relative;
+        right: 5%;
+        height: 50px;
+        width: 200px;
+        
+    
+    
+    }
+    .card__img{
+        height: 210px;
+        padding: 10px;
+    }
+    .menu_card{
+        margin-top: 15%;
+        margin-bottom: 20%;
+    }
+
+    
 }
+
+@media(max-width:390px) {
+    .menu_card{
+        margin-top: 20%;
+        margin-bottom: 40%;
+    }
+    .title_back h2{
+        top: 20%;
+    }
+
+    
+
+}
+

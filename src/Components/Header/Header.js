@@ -70,6 +70,30 @@ const Header = () => {
                     </div>
                 </div>
             </div>
+
+            <div className={styles.burger__menu}>
+                <input id="toggle" className={styles.toggle} type="checkbox" />
+                <label htmlFor="toggle" className={styles.btn2}>
+                    <span></span>
+                </label>
+
+                <div className={styles.sidebar}>
+                    <ul>
+                        <li><NavLink className={styles.menu__item} to='/'>Home</NavLink></li>
+                        <li><NavLink className={styles.menu__item} to='/basket'>Basket</NavLink></li>
+                        {
+                            !token &&
+                            <>
+                                <li><NavLink className={styles.menu__item} to='/login'>Login</NavLink></li>
+                                <li><NavLink className={styles.menu__item} to='registration'>Registration</NavLink></li>
+                            </>
+                        }
+                    </ul>
+                </div>
+            </div>
+
+
+
         </header>
     );
 };

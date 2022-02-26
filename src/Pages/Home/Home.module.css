@@ -6,6 +6,7 @@
     background: url('../../Images/pic/inner_page_banner.jpg') center,no-repeat;
     background-size: cover;
     position: relative;
+    z-index: -1;
 }
 .title_back h2{
 content: '';
@@ -73,12 +74,18 @@ font-family:'Roboto'  ;
 }
 
 .inp{
-    text-align: center;
-    background: rgb(240, 236, 236);
-    border: 1px solid rgb(78, 77, 77);
-    width: 400px;
-    height: 30px;
-    border-radius: 5px;
+    height: 50px;
+    width: 600px;
+    font-size: 18px;
+    line-height: 21px;
+    font-weight: 400;
+    color: rgb(209, 208, 208);
+    border: 1px solid rgba(185, 10, 216, 0.808);
+    border-radius: 10px;
+    background: black;
+    font-family: 'Roboto';
+    padding-left: 10px;
+    margin-top: 10px;
 }
 .btn {
     margin-left: 10px;
@@ -94,5 +101,22 @@ border-radius: 5px;
 }
 .home_section {
     min-height: 100vh;
+}
+
+
+@media(max-width:1200px) {
+.title_back h2{
+    position: absolute;
+    top:10px;
+}
+
+}
+
+@media(max-width:767px) {
+    .title_back h2{
+        position: absolute;
+        top: 15px;
+    }
+
 }
 

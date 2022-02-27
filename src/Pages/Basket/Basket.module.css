@@ -10,11 +10,10 @@
 .title {
     content: '';
     position: absolute;
-    top: 90px;
+    top: 40px;
     left: 10%;
     font-size: 50px;
     color: rgba(185, 10, 216, 0.808);
-    ;
     font-weight: 800;
     font-family: 'Roboto';
 }
@@ -104,6 +103,13 @@
     color: #eee;
     text-align: center;
 }
+.empty{
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    text-align: center;
+    font-family: 'Roboto';
+    margin-top: 20px;
+}
 
 .card_right button {
     width: 80px;
@@ -121,12 +127,22 @@
         position: absolute;
         top:40px;
     }
-    
-    }
-@media(max-width:1200px){
-    .title{
-        position: absolute;
-        top: 10px;
     }
 
+@media(max-width: 460px){
+    .inner__wrapperLeft p{
+        font-size: 13px;
+        padding: 0;
+        width: 30%;
+        margin-left: 5px;
+    }
+    .inner__wrapperRight p{
+        font-size: 13px;
+        padding: 0;
+        margin-right: 15px;
+    }
+    .empty{
+        font-size: 30px;
+    }
+    
 }

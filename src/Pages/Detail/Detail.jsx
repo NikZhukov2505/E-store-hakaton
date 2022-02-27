@@ -11,7 +11,6 @@ const Detail = () => {
     const [descr, setDescr] = useState(false)
     const changeVisible = () => setDescr(!descr)
     const laptopDetail = useSelector(state => state?.laptop?.laptopDetail)
-
     const dispatch = useDispatch()
 
 
@@ -48,11 +47,11 @@ const Detail = () => {
                 <h2 className={styles.title}>Detail</h2>
             </div>
             <div className='container'>
-                <div className={styles.block}>
+                <div data-aos="fade-down" data-aos-duration="1500" className={styles.block}>
                     <div className={`${styles.detail__card} ${styles.card1}`}>
                         <img className={styles.examp} src={laptopDetail?.image} alt="" />
                     </div>
-                    <div data-aos="fade-up" className={styles.detail__card}>
+                    <div className={styles.detail__card}>
                         <h2>{laptopDetail.title}</h2>
                         <h3>Цена: {laptopDetail.price}</h3>
                         <p>Info: {laptopDetail.comment}</p>

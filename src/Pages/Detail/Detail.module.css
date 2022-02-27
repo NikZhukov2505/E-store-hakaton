@@ -12,7 +12,7 @@
 .title {
     content: '';
     position: absolute;
-    top: 90px;
+    top: 50px;
     left: 10%;
     font-size: 50px;
     color: rgba(185, 10, 216, 0.808);;
@@ -28,7 +28,6 @@
 .block{
     margin: 100px 0;
     display: flex;
-    z-index: -3;
 }
 .detail__card {
     flex: 0 1 40%;
@@ -48,9 +47,7 @@
     color: rgb(195, 169, 20);
 
 }
-.detail__card{
-    z-index: -1;
-}
+
 .detail__card p {
     font-size: 22px;
     font-weight: 400;

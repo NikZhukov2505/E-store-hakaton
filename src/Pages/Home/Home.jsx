@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styles from './Home.module.css';
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAlllaptops, getByName } from '../../Redux/reducers/items-reducer';
 import { Link } from 'react-router-dom';
@@ -7,9 +9,6 @@ import { Link } from 'react-router-dom';
 const Home = () => {
     const laptopArr = useSelector(state => state?.laptop?.laptopArr)
     const dispatch = useDispatch()
-    // console.log(laptopArr);
-
-
 
     const search = (e) => {
         dispatch(getByName(e?.target?.value))
@@ -18,6 +17,7 @@ const Home = () => {
 
     useEffect(() => {
         dispatch(getAlllaptops())
+        AOS.init();
     }, [])
 
 
@@ -62,7 +62,7 @@ const Home = () => {
                         {
                             laptopArr.map((e) => {
                                 return (
-                                    <div className={styles.menu_card} key={e.id}>
+                                    <div data-aos="flip-up" data-aos-duration="1500" className={styles.menu_card} key={e.id}>
                                         <Link to={'/detail/' + e?.id}>
                                             <div className={styles.card__img}>
                                                 <img src={e.image} alt="" />

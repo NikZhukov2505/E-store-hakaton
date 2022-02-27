@@ -65,6 +65,7 @@ const Header = () => {
                                     token ? (
                                         <>
                                             <li><Link className={styles.menu} to='/'>Home</Link></li>
+                                            <li><Link className={styles.menu} to='/aboutus'>About Us</Link></li>
                                             <li><Link className={styles.menu} to='/basket'>Cart</Link></li>
                                             <button className={styles.add__btn} onClick={logOut}>Выход</button>
                                         </>
@@ -72,14 +73,46 @@ const Header = () => {
                                         (
                                             <>
                                                 <li><Link className={styles.menu} to='/'>Home</Link></li>
+                                                <li><Link className={styles.menu} to='/aboutus'>About Us</Link></li>
                                                 <li><Link className={styles.menu} to='/basket'>Cart</Link></li>
-                                                <li><Link className={styles.menu} to='/login'>Login</Link></li>
-                                                <li><Link className={styles.menu} to='registration'>Registration</Link></li>
+                                                <li><Link className={styles.menu} to='/login'>SignIn</Link></li>
+                                                <li><Link className={styles.menu} to='registration'>SignUp</Link></li>
                                             </>
                                         )
 
                                 }
                             </nav>
+
+                            <div className="burger_menu">
+                                <input id="toggle" type="checkbox" />
+                                <label htmlFor="toggle" className="btn2">
+                                    <span></span>
+                                </label>
+                                <ul className="sidebar">
+
+                                    {
+                                        token ? (
+                                            <>
+                                                <li><Link className="menu__item" to='/'>Home</Link></li>
+                                                <li><Link className="menu__item" to='/aboutus'>About Us</Link></li>
+                                                <li><Link className="menu__item" to='/basket'>Cart</Link></li>
+                                                <button className={styles.add__btn} onClick={logOut}>Выход</button>
+                                            </>
+                                        ) :
+                                            (
+                                                <>
+                                                    <li><Link className="menu__item" to='/'>Home</Link></li>
+                                                    <li><Link className="menu__item" to='/aboutus'>About Us</Link></li>
+                                                    <li><Link className="menu__item" to='/basket'>Cart</Link></li>
+                                                    <li><Link className="menu__item" to='/login'>SignIn</Link></li>
+                                                    <li><Link className="menu__item" to='registration'>SignUp</Link></li>
+                                                </>
+                                            )
+
+                                    }
+
+                                </ul>
+                            </div>
                         </div>
                     </div>
                 </div>

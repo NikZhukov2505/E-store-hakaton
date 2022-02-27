@@ -1,8 +1,10 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import Spinner from '../../../Components/Spinner/Spinner';
 import { singIn } from '../../../Redux/reducers/store-reducer';
 import styles from './Login.module.css'
+import AOS from 'aos';
+import 'aos/dist/aos.css';
 
 const Login = () => {
     const dispatch = useDispatch()
@@ -18,6 +20,9 @@ const Login = () => {
         e.preventDefault()
         dispatch(singIn(userData))
     }
+    useEffect(() => {
+        AOS.init();
+    }, [])
     if (isLoading) {
         return <Spinner />
     }
@@ -25,12 +30,12 @@ const Login = () => {
         <section className={styles.logIn}>
             <div className={styles.container}>
                 <form onSubmit={logIn}>
-                    <div className={styles.inputs}>
+                    <div data-aos="zoom-in" data-aos-duration="1000" className={styles.inputs}>
 
                         <div>
                             <p>Ваш Логин</p>
                             <input value={userData.username} onChange={(e) => getUserData('username', e.target.value)} className={`${styles.enter} ${styles.enter1}`} type="text"
-                                placeholder='Введите ваш адрес эл. почты' />
+                                placeholder='Введите ваш Login' />
                         </div>
                         <div>
                             <p>Ваш пароль</p>

@@ -25,6 +25,7 @@ const Footer = () => {
                         <div className={styles.navigatiion}>
                             <nav className={styles.menu__nav}>
                                 <li><NavLink className={styles.menu} to='/'>Home</NavLink></li>
+                                <li><NavLink className={styles.menu} to='/aboutus'>About Us</NavLink></li>
                                 <li><NavLink className={styles.menu} to='/basket'>Cart</NavLink></li>
                             </nav>
                         </div>
@@ -34,7 +35,6 @@ const Footer = () => {
             <div className={styles.footer__bottom}>
                 <h1>© Copyrights 2022 Design by studentsITCBootcamp</h1>
             </div>
-
         </footer>
     );
 };

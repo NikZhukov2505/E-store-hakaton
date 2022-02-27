@@ -28,26 +28,28 @@ const Registration = () => {
         return <Spinner />
     }
     return (
-        <div className={styles.container}>
-            <form onSubmit={regist} className={styles.form__regist}>
-                <div className={styles.inputs}>
-                    <p>Email</p>
-                    <input value={userData.email} onChange={(e) => getUserData('email', e.target.value)} className={styles.enter} placeholder='Ваш Email' type="text" />
-                </div>
-                <div className={styles.inputs}>
-                    <p>UserName</p>
-                    <input value={userData.username} onChange={(e) => getUserData('username', e.target.value)} className={styles.enter} placeholder='Ваш Логин' type="text" />
-                </div>
-                <div className={styles.inputs}>
-                    <p>Password</p>
-                    <input value={userData.password} onChange={(e) => getUserData('password', e.target.value)} className={styles.enter} placeholder='Ваш Пароль' type="password" />
-                    <p className={styles.pass__info}>Пароль должен содержать: "Латиница" Больше 5 символов 1 заглавный и одна цифра</p>
-                </div>
-                <div className={styles.btn__wrap}>
-                    <button className={styles.add__btn}>Регистрация</button>
-                </div>
-            </form>
-        </div>
+        <section className={styles.regist__page}>
+            <div className={styles.container}>
+                <form onSubmit={regist} className={styles.form__regist}>
+                    <div className={styles.inputs}>
+                        <p>Email</p>
+                        <input value={userData.email} onChange={(e) => getUserData('email', e.target.value)} className={styles.enter} placeholder='Ваш Email' type="text" />
+                    </div>
+                    <div className={styles.inputs}>
+                        <p>UserName</p>
+                        <input value={userData.username} onChange={(e) => getUserData('username', e.target.value)} className={styles.enter} placeholder='Ваш Логин' type="text" />
+                    </div>
+                    <div className={styles.inputs}>
+                        <p>Password</p>
+                        <input value={userData.password} onChange={(e) => getUserData('password', e.target.value)} className={styles.enter} placeholder='Ваш Пароль' type="password" />
+                        <p className={styles.pass__info}>Пароль должен содержать: "Латиница" Больше 5 символов 1 заглавный и одна цифра</p>
+                    </div>
+                    <div className={styles.btn__wrap}>
+                        <button className={styles.add__btn}>Регистрация</button>
+                    </div>
+                </form>
+            </div>
+        </section>
     );
 };
 

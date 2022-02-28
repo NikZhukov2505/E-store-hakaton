@@ -21,13 +21,14 @@ const Header = () => {
     const { token } = useSelector(state => state.user)
 
     const logOut = () => {
-        dispatch(removeLSToken())
         window.location.reload()
+        dispatch(removeLSToken())
     }
 
     useEffect(() => {
         lsToken && dispatch(setToken(lsToken));
         navigate('/');
+
     }, [token]);
 
     return (

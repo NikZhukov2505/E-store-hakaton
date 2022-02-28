@@ -6,7 +6,7 @@
     background: url('../../Images/pic/inner_page_banner.jpg') center,no-repeat;
     background-size: cover;
     position: relative;
-    z-index: -1;
+    z-index: 1;
 }
 .title_back h2{
 content: '';
@@ -27,11 +27,8 @@ font-family:'Roboto'  ;
 .menu_card{
     flex: 0 1 22%;
     margin-top: 10%;
-    margin-bottom: 10%;
     width: 100%;
-    height: 200px;
     text-align: center;
-    transition: 0.8s;
 }
 
 .menu_card:hover {
@@ -43,6 +40,7 @@ font-family:'Roboto'  ;
     width: 100%;
     height: 260px;
     border: 20px solid rgba(185, 10, 216, 0.808);
+    transition: 0.5s ease 0s;
 }
 .menu_card img:hover{
     border:1px solid white
@@ -99,7 +97,11 @@ text-shadow: black 1px 1px 1px ;
 border-radius: 5px;
 }
 .home_section {
-    min-height: 100vh;
+    /* min-height: 100vh; */
+    width: 100%;
+    min-height: 180vh;
+    background: url('./../../Images/rog.jpg') center,no-repeat;
+    background-size: cover;
 }
 .add__btn {
     width: 150px;

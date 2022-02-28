@@ -46,7 +46,7 @@ const Basket = () => {
                 {
                     products.length > 0 ?
                         products?.map(e => (
-                            <div data-aos="fade-down" data-aos-duration="1500" key={e.id} className={styles.card}>
+                            <div data-aos="fade-down" data-aos-duration="1000" key={e.id} className={styles.card}>
                                 <div className={styles.card_left}>
                                     <img src={e.img} width='100' alt="wa" />
                                     <h1>{e.name}</h1>
@@ -56,7 +56,7 @@ const Basket = () => {
                                     <input defaultValue={e.count} type="number" />
                                     <p>{e.price}</p>
                                     <p>{e.count * e.price}</p>
-                                    <button onClick={() => removeItem(e.id)}>REMOVE</button>
+                                    <button onClick={() => removeItem(e.id)}>DEL</button>
                                 </div>
                             </div>
                         ))

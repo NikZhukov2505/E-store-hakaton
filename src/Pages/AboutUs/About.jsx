@@ -6,12 +6,12 @@ import 'aos/dist/aos.css';
 
 const About = () => {
     useEffect(() => {
-        AOS.init();
+
     }, [])
     return (
         <div>
             <div className={styles.about__back}>
-                <div className={styles.about__card} data-aos="flip-right" data-aos-duration="1500" >
+                <div className={styles.about__card}>
                     <img className={styles.peoples} src={people} alt="" />
                     <div className={styles.card__text}>
                         <h2>About Us</h2>

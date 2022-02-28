@@ -7,7 +7,7 @@ import mail from './../../Images/mail.png'
 import facebook from './../../Images/facebook2.png'
 import instagram from './../../Images/instagram2.png'
 import twitter from './../../Images/twitter.png'
-import logo from './../../Images/it_logo.png'
+import logo from './../../Images/done.png'
 import { useDispatch, useSelector } from 'react-redux';
 import { getToken, removeLSToken } from '../../LocalStorage';
 import { setToken } from '../../Redux/reducers/store-reducer';

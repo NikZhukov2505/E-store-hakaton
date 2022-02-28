@@ -51,7 +51,7 @@
     padding-top: 10px;
 }
 .logo {
-    width: 200px;
+    width: 100px;
 }
 .bottom__block{
     display: flex;
@@ -109,6 +109,13 @@
    .header__top{
        display: none;
    }
+}
+@media(max-width: 460px){
+    .logo{
+        width: 70px;
+        position: absolute;
+        right: 5%;
+    }
 }
 
     

@@ -96,7 +96,7 @@
 .logIn{
     width: 100%;
     min-height: 180vh;
-   padding-top: 200px;
+   padding-top: 100px;
     background: url('./../../../Images/msi.jpg') center, no-repeat;
     background-size: cover;
 }
@@ -118,10 +118,13 @@
 
 }
 @media(max-width: 460px){
-    .inputs input{
-        width: 100%;
-    }
+    
+    
     .container{
         width: 90%;
+    }
+    .logIn{
+        min-height: 60vh;
+        padding-bottom: 50px;
     }
 }

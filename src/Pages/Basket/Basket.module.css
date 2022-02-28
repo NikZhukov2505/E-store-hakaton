@@ -134,7 +134,7 @@
         font-size: 13px;
         padding: 0;
         width: 30%;
-        margin-left: 5px;
+        margin-left: 10px;
     }
     .inner__wrapperRight p{
         font-size: 13px;
@@ -144,5 +144,21 @@
     .empty{
         font-size: 30px;
     }
-    
+    .card_left{
+        width: 30%;
+    }
+    .card_left img{
+    display: none;
+    }
+    .card_right{
+        width: 60%;
+        justify-content: space-between;
+    }
+    .card_right p{
+        font-size: 15px;
+    }
+    .card_right input {
+        width: 40px;
+        margin-right: 30px;
+    }
 }

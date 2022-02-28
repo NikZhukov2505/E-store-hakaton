@@ -12,6 +12,7 @@ const Detail = () => {
     const changeVisible = () => setDescr(!descr)
     const laptopDetail = useSelector(state => state?.laptop?.laptopDetail)
     const dispatch = useDispatch()
+    const [count, setCount] = React.useState(0)
 
 
     useEffect(() => {
@@ -26,7 +27,7 @@ const Detail = () => {
         const product = {
             name: el.title,
             id: el.id,
-            count: 1,
+            count,
             price: el.price,
             img: el.image,
         }
@@ -56,7 +57,7 @@ const Detail = () => {
                         <h3>Цена: {laptopDetail.price}</h3>
                         <p>Info: {laptopDetail.comment}</p>
                         <div className={styles.detail__add}>
-                            <input type="number" id="quantity" name="quantity" min="1" max="10" />
+                            <input onChange={(e) => setCount(e.target.value)} type="number" id="quantity" name="quantity" min="1" max="10" />
                             <button onClick={() => addToBasket(laptopDetail)} className={styles.add__btn}>Add To Cart</button>
                         </div>
                     </div>

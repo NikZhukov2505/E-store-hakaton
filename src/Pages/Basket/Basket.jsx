@@ -5,8 +5,6 @@ import 'aos/dist/aos.css';
 
 const Basket = () => {
 
-
-
     const [products, setProdcts] = React.useState([])
 
     React.useEffect(() => {

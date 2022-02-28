@@ -22,7 +22,6 @@
 }
 .examp{
     width: 100%;
-    
     border-radius: 4px;
 }
 .block{
@@ -30,7 +29,7 @@
     display: flex;
 }
 .detail__card {
-    flex: 0 1 40%;
+    flex: 0 1 25%;
 }
 .detail__card h2 {
     font-size: 28px;
